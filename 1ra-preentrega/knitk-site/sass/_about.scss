@@ -1,0 +1,58 @@
+/* mixin */
+@mixin sizes ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+/* map */
+$estilosAbout: (
+    fuente:  sans-serif,
+    padding: 10px,
+    align: center,
+    contenido: space-between,
+    borde: 2px,
+    );
+
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+/*  background-color: #FF9A8B; */
+    background-image: $gradientPink;
+    font-family: map-get($estilosAbout, $fuente);
+    padding: map-get($estilosAbout, $padding);
+    align-items: map-get($estilosAbout, $align);
+    justify-content: map-get($estilosAbout, $contenido);
+    border-radius:  map-get($estilosAbout, $borde);
+    margin: 20px 5px;
+
+    .infoIntro {
+        h1 {
+            color: $regularWhite;
+        }
+        h5 {
+            animation-name: miEfecto;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: 0;
+            animation-duration: 1s;
+        }
+    }
+
+    .introImg {
+        img {
+            @include sizes(90%, auto);
+            margin: 20px;
+            border-radius: 4px;
+        }
+    }
+
+    .top-content {
+        display: flex;
+    }
+
+    .boxAbout {
+        padding: 40px 40px;
+        position: relative;
+    }
+}

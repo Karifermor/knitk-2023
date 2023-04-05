@@ -1,0 +1,22 @@
+
+
+.boxModel {
+    background-color: rgb(254, 254, 254);
+    text-align: center;
+    position: relative;
+    margin: 10px;
+
+    img {
+        padding: 10px;
+
+        &:hover {
+            filter: drop-shadow(2px 4px 6px grey);
+        }
+    }
+
+    .btn-shop {
+        margin: 10px;
+    }
+
+
+}
